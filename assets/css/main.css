@@ -1,0 +1,83 @@
+body {
+  font-size: 18px;
+  font-family: "Oxygen", "Ubuntu", sans-serif; }
+  body #navToggle, body #navtoggle:hover, body #navtoggle:active, body #navtoggle:focus, body #navtoggle:visited {
+    z-index: 1000000;
+    position: absolute;
+    min-width: 50px;
+    min-height: 50px;
+    border: none;
+    background: none;
+    color: #0090C1;
+    font-size: 30px;
+    left: 1em;
+    top: 0.2em;
+    outline: none; }
+
+.slider {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  z-index: 100000;
+  top: -8.33333vh; }
+  .slider .header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    min-width: 100%;
+    min-height: 8.33333vh;
+    box-shadow: 0px 5px 50px 0.1px rgba(0, 0, 0, 0.05); }
+    .slider .header h2 {
+      min-width: 100%;
+      min-height: 8.33333vh;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      color: #0090C1;
+      font-size: 20px; }
+  .slider .navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 91.66667vh;
+    background: #001e28;
+    color: #FFF;
+    padding: 1em;
+    font-family: "Raleway", sans-serif; }
+    .slider .navigation .row {
+      width: 80%; }
+    .slider .navigation .holder {
+      max-height: 80vh;
+      overflow-y: scroll; }
+    .slider .navigation .about {
+      text-align: left;
+      margin-top: 2em; }
+      .slider .navigation .about h1 {
+        font-weight: bold;
+        font-size: 30px; }
+      .slider .navigation .about p {
+        margin-top: 1em; }
+    .slider .navigation .menu {
+      text-align: right;
+      margin-top: 2em; }
+      .slider .navigation .menu h1 {
+        margin: 0.5em;
+        font-weight: lighter;
+        font-size: 25px; }
+      .slider .navigation .menu .nav-link {
+        color: #FFF; }
+      .slider .navigation .menu .nav-link:hover {
+        color: #0090C1; }
+  .slider .content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    top: 0; }
+
+/*# sourceMappingURL=main.css.map */
