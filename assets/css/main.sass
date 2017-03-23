@@ -1,6 +1,8 @@
 
 $primary: #0090C1
 $headerHeight : 100vh/12
+$pageBreak : 1000px
+
 
 =flex($direction, $position)
     display: flex
@@ -43,6 +45,7 @@ body
 .slider
     +resetbox
     +flex(column wrap, flex-start)
+    position: absolute
     z-index: 100000
     top: -($headerHeight)
     .header
@@ -67,7 +70,8 @@ body
             width: 80%
         .holder
             max-height: 80vh
-            overflow-y: scroll
+            @media screen and (max-width: $pageBreak)
+                overflow-y: scroll
         .about
             text-align: left
             margin-top: 2em
@@ -79,6 +83,11 @@ body
         .menu
             text-align: right
             margin-top: 2em
+            .social
+                +flex(row wrap, flex-end)
+                text-align: right
+                .icons
+                    +flex(row wrap, space-around)
             h1
                 margin : .5em
                 font-weight: lighter
@@ -89,4 +98,88 @@ body
                 color: $primary
     .content
         +flex(column wrap, flex-start)
-        top: 0
+        .posts
+            +flex(column wrap, flex-start)
+            @media screen and (max-width: $pageBreak)
+                +flex(row wrap, flex-start)
+            .post
+                text-shadow: 0px 0px 10px rgba(0,0,0,0.25)
+                +flex(column wrap, flex-end)
+                +min-size(80%, 300px)
+                @media screen and (max-width: $pageBreak)
+                    +min-size(50%, 200px)
+                    max-width: 50%
+                .postInfo
+                    padding-bottom: 1em
+                    background: linear-gradient(transparent, rgba(0,0,0,0.5))
+                    @media screen and (max-width: $pageBreak)
+                        background: none
+                        background: rgba(0,0,0,0.3)
+                    .postName
+                        padding-top: .1em
+                        padding-bottom: .1em
+                        padding-left: .5em
+                        color: #FFF
+                        font-size: 5em
+                        @media screen and (max-width: $pageBreak)
+                            font-size: 1.5em
+                    .postAuthor
+                        +flex(row wrap, flex-start)
+                        @media screen and (max-width: $pageBreak)
+                            background: none
+                            padding: .2em
+                            +flex(row wrap, space-around)
+                        .avatar
+                            +min-size(50px, 50px)
+                            border-radius: 100%
+                            background-size: cover
+                            background-position: center
+                            border: 1px solid white
+                            margin-left: 3em
+                            @media screen and (max-width: $pageBreak)
+                                +min-size(30px, 30px)
+                                margin-left: 0
+                        .name
+                            +flex(column wrap, center)
+                            +min-size(400px, 50px)
+                            color: #FFF
+                            margin-left: 1em
+                            @media screen and (max-width: $pageBreak)
+                                +min-size(70%, 30px)
+                                margin-left: 0
+.footer
+    +min-size(100%, 400px)
+    background: $primary
+
+#img1
+    background: url("https://images.unsplash.com/photo-1454789591675-556c287e39e2?dpr=1&auto=compress,format&fit=crop&w=1200&h=300&q=100&cs=tinysrgb&crop=") no-repeat
+    background-size: cover
+    background-position: center
+#img2
+    background: url('https://images.unsplash.com/photo-1469204691332-56e068855403?dpr=1&auto=compress,format&fit=crop&w=1200&h=300&q=100&cs=tinysrgb&crop=') no-repeat
+    background-size: cover
+    background-position: center
+#img3
+    background: url('https://images.unsplash.com/photo-1490245104593-326313f18b73?dpr=1&auto=compress,format&fit=crop&w=1200&h=300&q=100&cs=tinysrgb&crop=') no-repeat
+    background-size: cover
+    background-position: center
+#img4
+    background: url("https://images.unsplash.com/photo-1468277799724-b8ecdfa2cd7a?dpr=1&auto=compress,format&fit=crop&w=1200&h=300&q=100&cs=tinysrgb&crop=") no-repeat
+    background-size: cover
+    background-position: center
+#av1
+    background:  url("../img/women6.jpg") no-repeat
+    background-size: cover
+    background-position: center
+#av2
+    background:  url("../img/women12.jpg") no-repeat
+    background-size: cover
+    background-position: center
+#av3
+    background:  url("../img/women8.jpg") no-repeat
+    background-size: cover
+    background-position: center
+#av4
+    background:  url("../img/women90.jpg") no-repeat
+    background-size: cover
+    background-position: center

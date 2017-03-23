@@ -34,6 +34,7 @@ body {
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
+  position: absolute;
   z-index: 100000;
   top: -8.33333vh; }
   .slider .header {
@@ -66,8 +67,10 @@ body {
     .slider .navigation .row {
       width: 80%; }
     .slider .navigation .holder {
-      max-height: 80vh;
-      overflow-y: scroll; }
+      max-height: 80vh; }
+      @media screen and (max-width: 1000px) {
+        .slider .navigation .holder {
+          overflow-y: scroll; } }
     .slider .navigation .about {
       text-align: left;
       margin-top: 2em; }
@@ -79,6 +82,15 @@ body {
     .slider .navigation .menu {
       text-align: right;
       margin-top: 2em; }
+      .slider .navigation .menu .social {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        text-align: right; }
+        .slider .navigation .menu .social .icons {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-around; }
       .slider .navigation .menu h1 {
         margin: 0.5em;
         font-weight: lighter;
@@ -90,7 +102,125 @@ body {
   .slider .content {
     display: flex;
     flex-flow: column wrap;
-    justify-content: flex-start;
-    top: 0; }
+    justify-content: flex-start; }
+    .slider .content .posts {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start; }
+      @media screen and (max-width: 1000px) {
+        .slider .content .posts {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start; } }
+      .slider .content .posts .post {
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+        min-width: 80%;
+        min-height: 300px; }
+        @media screen and (max-width: 1000px) {
+          .slider .content .posts .post {
+            min-width: 50%;
+            min-height: 200px;
+            max-width: 50%; } }
+        .slider .content .posts .post .postInfo {
+          padding-bottom: 1em;
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)); }
+          @media screen and (max-width: 1000px) {
+            .slider .content .posts .post .postInfo {
+              background: none;
+              background: rgba(0, 0, 0, 0.3); } }
+          .slider .content .posts .post .postInfo .postName {
+            padding-top: 0.1em;
+            padding-bottom: 0.1em;
+            padding-left: 0.5em;
+            color: #FFF;
+            font-size: 5em; }
+            @media screen and (max-width: 1000px) {
+              .slider .content .posts .post .postInfo .postName {
+                font-size: 1.5em; } }
+          .slider .content .posts .post .postInfo .postAuthor {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start; }
+            @media screen and (max-width: 1000px) {
+              .slider .content .posts .post .postInfo .postAuthor {
+                background: none;
+                padding: 0.2em;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around; } }
+            .slider .content .posts .post .postInfo .postAuthor .avatar {
+              min-width: 50px;
+              min-height: 50px;
+              border-radius: 100%;
+              background-size: cover;
+              background-position: center;
+              border: 1px solid white;
+              margin-left: 3em; }
+              @media screen and (max-width: 1000px) {
+                .slider .content .posts .post .postInfo .postAuthor .avatar {
+                  min-width: 30px;
+                  min-height: 30px;
+                  margin-left: 0; } }
+            .slider .content .posts .post .postInfo .postAuthor .name {
+              display: flex;
+              flex-flow: column wrap;
+              justify-content: center;
+              min-width: 400px;
+              min-height: 50px;
+              color: #FFF;
+              margin-left: 1em; }
+              @media screen and (max-width: 1000px) {
+                .slider .content .posts .post .postInfo .postAuthor .name {
+                  min-width: 70%;
+                  min-height: 30px;
+                  margin-left: 0; } }
+
+.footer {
+  min-width: 100%;
+  min-height: 400px;
+  background: #0090C1; }
+
+#img1 {
+  background: url("https://images.unsplash.com/photo-1454789591675-556c287e39e2?dpr=1&auto=compress,format&fit=crop&w=1200&h=300&q=100&cs=tinysrgb&crop=") no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#img2 {
+  background: url("https://images.unsplash.com/photo-1469204691332-56e068855403?dpr=1&auto=compress,format&fit=crop&w=1200&h=300&q=100&cs=tinysrgb&crop=") no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#img3 {
+  background: url("https://images.unsplash.com/photo-1490245104593-326313f18b73?dpr=1&auto=compress,format&fit=crop&w=1200&h=300&q=100&cs=tinysrgb&crop=") no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#img4 {
+  background: url("https://images.unsplash.com/photo-1468277799724-b8ecdfa2cd7a?dpr=1&auto=compress,format&fit=crop&w=1200&h=300&q=100&cs=tinysrgb&crop=") no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#av1 {
+  background: url("../img/women6.jpg") no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#av2 {
+  background: url("../img/women12.jpg") no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#av3 {
+  background: url("../img/women8.jpg") no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#av4 {
+  background: url("../img/women90.jpg") no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 /*# sourceMappingURL=main.css.map */

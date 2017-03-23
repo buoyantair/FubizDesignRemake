@@ -6,9 +6,11 @@ $(document).ready(function(){
     $('.slider').css({
         top: '-'+menuHeight
     })
+    window.scrollTo( 0, 0 );
     $("#navToggle").click(function(){
         if (!menuShowed){
             menuShowed = true;
+            window.scrollTo( 0, 0 );
             $('.slider').animate({
                 top: 0
             }, 500, function(){
