@@ -1,5 +1,6 @@
 
 $primary: #0090C1
+$secondary: darken($primary, 30%)
 $headerHeight : 100vh/12
 $pageBreak : 1000px
 
@@ -62,7 +63,7 @@ body
     .navigation
         +flex(row wrap, center)
         +min-size(100%, 100vh - $headerHeight)
-        background: darken($primary, 30%)
+        background: $secondary
         color: #FFF
         padding: 1em
         font-family: 'Raleway', sans-serif
@@ -149,8 +150,38 @@ body
                                 margin-left: 0
 .footer
     +min-size(100%, 400px)
-    background: $primary
-
+    background: $secondary
+    color: #FFF
+    padding-bottom: 3em
+    .container
+        margin-top: 2em
+        h1
+            font-size: 30px
+        .author
+            text-align: center
+            overflow: hidden
+            margin: .5em
+            background: #FFF
+            border-radius: 5px
+            padding-bottom: 2em
+            +min-size(100px, 350px)
+            +flex(column wrap, flex-start)
+            font-size: 30px
+            h1
+                color: #888
+                margin-top: 1em
+                margin-bottom: 1em
+            .r
+                +flex(row wrap, center)
+                padding: 1em
+                .author-pic
+                    +min-size(250px, 250px)
+                    max-width: 250px
+                    border-radius: 100%
+                    background: url("../img/author.jpg") no-repeat
+                    background-size: 100%
+                    background-position: center
+                    margin-bottom: 1em
 #img1
     background: url("https://images.unsplash.com/photo-1454789591675-556c287e39e2?dpr=1&auto=compress,format&fit=crop&w=1200&h=300&q=100&cs=tinysrgb&crop=") no-repeat
     background-size: cover
